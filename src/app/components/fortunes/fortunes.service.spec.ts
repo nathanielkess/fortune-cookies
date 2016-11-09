@@ -93,13 +93,13 @@ describe('Service: Fortune', () => {
 
   });
 
-  describe('#updateFortuneById(number, values)', () => {    
+  describe('#updateFortuneById(fortune, values)', () => {    
 
-    it('should return null if the fortune is not found', inject([FortunesService], (service: FortunesService) => {
-      let actual = service.updateFortuneById(1000, {fortune: 'you will have a great day.' });
-      let expected = null;
-      expect(actual).toEqual(expected);
-    }));
+    // it('should return null if the fortune is not found', inject([FortunesService], (service: FortunesService) => {
+    //   let actual = service.updateFortuneById(1000, {fortune: 'you will have a great day.' });
+    //   let expected = null;
+    //   expect(actual).toEqual(expected);
+    // }));
 
     it('should update the fortune', inject([FortunesService], (service: FortunesService) => {
       
@@ -109,7 +109,7 @@ describe('Service: Fortune', () => {
       service.addFortune(myFortune1);
       service.addFortune(myFortune2);
 
-      let updatedCookie = service.updateFortuneById(1, { fortune: 'Greatness ahead!'});
+      let updatedCookie = service.updateFortune(myFortune1, { fortune: 'Greatness ahead!'});
 
       let actual = updatedCookie.fortune === 'Greatness ahead!';
       let expected = true;

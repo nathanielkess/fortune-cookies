@@ -40,14 +40,20 @@ export class FortunesService {
     
   }
 
-  updateFortuneById(id, values:Object = {}):any {
+  // updateFortuneById(id, values:Object = {}):any {
 
-    let fCookie = this.getFortuneById(id);
-    if(!fCookie){
-      return null;
-    }
-    Object.assign(fCookie, values);
-    return fCookie;
+  //   let fCookie = this.getFortuneById(id);
+  //   if(!fCookie){
+  //     return null;
+  //   }
+  //   Object.assign(fCookie, values);
+  //   return fCookie;
+  // }'
+  
+
+  updateFortune(fortune:Fortune, values:Object = {}):any {
+    Object.assign(fortune, values);
+    return fortune;
   }
 
   deleteFortuneById(id):void {
