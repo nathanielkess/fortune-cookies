@@ -1,6 +1,11 @@
+import { FormsModule } from '@angular/forms';
+import { FortunesService } from './../fortunes.service';
+import { EditFortuneComponent } from './../edit-fortune/edit-fortune.component';
+import { AddFortuneComponent } from './../add-fortune/add-fortune.component';
+import { HttpModule } from '@angular/http';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
+import { By, BrowserModule } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ListFortuneComponent } from './list-fortune.component';
@@ -11,7 +16,16 @@ describe('ListFortuneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListFortuneComponent ]
+      declarations: [ 
+        ListFortuneComponent,
+        AddFortuneComponent
+      ],
+      imports: [
+        FormsModule
+      ],
+      providers:[
+        FortunesService
+      ]
     })
     .compileComponents();
   }));

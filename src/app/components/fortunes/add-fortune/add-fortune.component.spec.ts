@@ -1,3 +1,5 @@
+import { FormsModule } from '@angular/forms';
+import { FortunesService } from './../fortunes.service';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -11,7 +13,15 @@ describe('AddFortuneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddFortuneComponent ]
+      declarations: [ 
+        AddFortuneComponent 
+      ],
+      imports:[
+        FormsModule
+      ],
+      providers:[
+        FortunesService
+      ]
     })
     .compileComponents();
   }));

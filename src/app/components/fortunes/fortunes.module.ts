@@ -1,3 +1,4 @@
+import { FortunesService } from './fortunes.service';
 import { FortunesRoutingModule } from './fortunes-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -22,7 +23,9 @@ import { FortunesComponent } from './fortunes/fortunes.component';
     HttpModule,
     FortunesRoutingModule
   ],
-  providers: [],
+  providers: [
+    FortunesService
+  ],
   exports: [
     AddFortuneComponent,
     EditFortuneComponent,

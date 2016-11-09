@@ -1,3 +1,6 @@
+import { FortunesService } from './../fortunes.service';
+
+import { Fortune } from './../fortune';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListFortuneComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(private fortunesService:FortunesService) { }
 
   ngOnInit() {
+
   }
+
+  get fortunes(){
+    return this.fortunesService.getAllFortunes();
+  }
+
+
 
 }
