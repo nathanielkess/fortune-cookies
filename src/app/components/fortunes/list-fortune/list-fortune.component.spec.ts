@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { FortunesService } from './../fortunes.service';
 import { EditFortuneComponent } from './../edit-fortune/edit-fortune.component';
@@ -21,7 +22,8 @@ describe('ListFortuneComponent', () => {
         AddFortuneComponent
       ],
       imports: [
-        FormsModule
+        FormsModule,
+        RouterModule
       ],
       providers:[
         FortunesService

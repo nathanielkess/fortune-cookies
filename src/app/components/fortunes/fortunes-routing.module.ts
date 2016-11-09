@@ -11,7 +11,7 @@ import { NgModule }     from '@angular/core';
       { path: 'fortunes', redirectTo: 'fortunes/manage', pathMatch: 'full' },
       { path: 'fortunes', component:FortunesComponent, children:[
           { path:'manage', component:ListFortuneComponent },
-          { path:'edit', component:EditFortuneComponent }
+          { path:'edit/:id', component:EditFortuneComponent }
       ]},
     ])
   ],

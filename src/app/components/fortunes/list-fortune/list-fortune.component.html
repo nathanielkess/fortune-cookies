@@ -3,6 +3,6 @@
 
 <ul>
   <li *ngFor="let fortune of fortunes">
-    Fortune: {{ fortune.fortune }}
+    <a [routerLink]="['/edit', fortune.id ]">{{ fortune.fortune }}</a>
   </li>
 </ul>
