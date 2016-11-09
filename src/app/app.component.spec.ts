@@ -1,3 +1,4 @@
+import { CommonModule } from './common/common.module';
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
@@ -11,7 +12,8 @@ describe('App: FortuneCookies', () => {
         AppComponent
       ],
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        CommonModule
       ]
     });
   });

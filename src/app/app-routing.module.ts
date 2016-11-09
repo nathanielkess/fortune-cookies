@@ -8,7 +8,6 @@ import { NgModule }     from '@angular/core';
     RouterModule.forRoot([
       { path: '', redirectTo: 'myfortune', pathMatch: 'full' },
       { path: 'myfortune', component:FortuneCookieComponent},
-      { path: '**', component:FortuneCookieComponent}
     //   { path: 'fortunes', component: FortunesComponent },
     ])
   ],
