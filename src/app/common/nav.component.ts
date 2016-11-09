@@ -11,6 +11,7 @@ import { RouterModule }   from '@angular/router';
     `,
     styles:[`
         nav { color:#cfcfcf; background-color:#333333; padding:20px; }
+        nav a { color:#cfcfcf;  }
     `]
 })
 export class NavComponent {

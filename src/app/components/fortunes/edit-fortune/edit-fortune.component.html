@@ -1,3 +1,14 @@
 <p>
-  Current fortune: {{ currentFortune.fortune }}
+  Current fortune: {{ currentFortune?.fortune }}
 </p>
+
+<form #updateForm="ngForm" (ngSubmit)="updateFortune(updateForm)">
+  <input type="text" id="fortuneValue" name="fortuneValue" ngModel>
+  <br />
+  <button type="submit">Save</button>
+</form>
+
+<br />
+<br />
+
+<a [routerLink]="['/fortunes']" routerLinkActive="active">Back to fortunes</a>
