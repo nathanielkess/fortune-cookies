@@ -6,3 +6,6 @@
     <a [routerLink]="['/fortunes/edit', fortune.id ]">{{ fortune.fortune }}</a>
   </li>
 </ul>
+
+<h2>store:</h2>
+<pre>{{ (fortuneList | async) | json }}</pre>

@@ -1,6 +1,9 @@
-
+import { GETFORTUNES, ADDFORTUNE } from './../../reducers/fortune.reducer';
+import { Store } from '@ngrx/store';
 import { Fortune } from './fortune';
 import { Injectable } from '@angular/core';
+
+
 
 @Injectable()
 export class FortunesService {
@@ -8,18 +11,26 @@ export class FortunesService {
   lastId = 0;
   fortunes:Fortune[] = [];
 
-  constructor() { }
+  constructor(public store:Store<any>) { }
 
   getAllFortunes():Fortune[] {
     return this.fortunes;
   }
 
   addFortune(fCookie:Fortune):FortunesService {
+    
+    
+    this.store.dispatch({type:ADDFORTUNE, payload:fCookie});
+    
+
+    
     if(!fCookie.id){
       fCookie.id = ++this.lastId;
     }
     this.fortunes.push(fCookie);
     return this;
+
+
   }
 
   getFortuneById(id:number):Fortune {

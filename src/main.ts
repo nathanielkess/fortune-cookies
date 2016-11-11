@@ -1,3 +1,7 @@
+import { fortuneReducer } from './app/reducers/fortune.reducer';
+import { provideStore } from '@ngrx/store';
+
+
 import './polyfills.ts';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';

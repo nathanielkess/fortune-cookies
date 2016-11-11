@@ -1,3 +1,5 @@
+import { fortuneReducer } from './../../reducers/fortune.reducer';
+import { Store, StoreModule } from '@ngrx/store';
 import { FortunesService } from './fortunes.service';
 import { FortunesRoutingModule } from './fortunes-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,10 +23,11 @@ import { FortunesComponent } from './fortunes/fortunes.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FortunesRoutingModule
+    FortunesRoutingModule,
+    StoreModule.provideStore(fortuneReducer)
   ],
   providers: [
-    FortunesService
+    FortunesService,
   ],
   exports: [
     AddFortuneComponent,
